@@ -369,6 +369,8 @@ footer {
   border-top: 1px solid #E0E0E0;
   padding: 1em;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 footer li {
@@ -379,20 +381,11 @@ footer li {
 footer a {
   text-decoration: none;
   color: #333;
-  padding: 1.5em;
+  padding: 1em 0 1em 0;
 }
 
 .content {
 	display: flex;
-	flex-wrap: wrap;
-}
-
-.header__menu {
-	display: none;
-}
-
-.content {
-    display: flex;
 	flex-wrap: wrap;
 }
 
@@ -415,6 +408,14 @@ footer a {
 		font-size: 2em;
 		vertical-align: bottom;
 	}
+	
+	.bars {
+		position: absolute;
+		font-size: 2em;
+		right: 20px;
+		top: 30px;
+		color: #CCCCCC
+	}
 	.header__inner {
 		width: 100%;
 	}
@@ -429,67 +430,93 @@ footer a {
           /* Optionally, we animate the drawer. */
     transition: transform 0.3s ease;
 	}
+	
 	.nav.open {
 		-webkit-transform: translate(0, 0);
         transform: translate(0, 0);
 	}
+	
 	.nav__item {
     display: list-item;
     border-bottom: 1px solid #E0E0E0;
     width: 100%;
     text-align: left;
     }
+	
     .header__menu {
     display: inline-block;
     position: absolute;
     right: 0;
     padding: 1em;
-  }
+    }
+	
     .header__menu svg {
     width: 32px;
     fill: #E0E0E0;
-  }
+    }
 }
 
 @media screen and (min-width: 549px) {
-    .fas fa-bars {
-		display: none;
+    .bars {
+	  display: none;
 	}
 	.hero {
-    order: 0;
-    width: 60%;
-  }
-   .weather {
-    order: 1;
-    width: 40%;
-  }
+      order: 0;
+      width: 60%;
+    }
+   
+    .weather {
+      order: 1;
+      width: 40%;
+    }
 }
 
 @media screen and (min-width: 700px) {
-   .hero {
+    .hero {
 	  order: 0;
-    width: 50%;
-  }
-   .top-news {
-    order: 1;
-    width: 50%;
-  }
-   .scores {
-    order: 2;
-    width: 60%;
-  }
-   .weather {
-    order: 3;
+      width: 50%;
+    }
+	
+    .top-news {
+      order: 1;
+      width: 50%;
+    }
+	
+    .scores {
+      order: 2;
+      width: 60%;
+    }
+	
+    .weather {
+      order: 3;
   }
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 800px) {
   main, 
   .header__inner, 
   .nav, 
   .content {
-    width: 850px;
+    width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
-}
+  
+  .hero {
+	width: 100%;
+  }
+  
+  .weather {
+	width: 100;
+   }
+   
+  .scores {
+	width: 100%;
+	}
+	
+  .top-news {
+	width: 100%;
+  }
+ }  
+
+   	
