@@ -9,4 +9,4 @@ menu.addEventListener("click", function(e) {
 
 main.addEventListener("click", function() {
 	drawer.classList.remove("open");
-});
+})
