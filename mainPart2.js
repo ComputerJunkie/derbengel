@@ -1,12 +1,12 @@
-$(function() {
-  let open = $("#open");
-  let close = $("#close");
-  let side = $(".nav");
+var menu= document.querySelector("#bars");
+var main= document.querySelector("main");
+var drawer= document.querySelector("#drawer");
 
-  open.click(function() {
-    side.toggleClass("open");
-  });
-  $("main").click(function() {
-    side.removeClass("open");
-  });
+menu.addEventListener("click", function(e) {
+	drawer.classList.toggle("open");
+	e.stopProgress();
+});
+
+main.addEventListener("click", function() {
+	drawer.classList.remove("open");
 });
