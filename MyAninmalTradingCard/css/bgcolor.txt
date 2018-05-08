@@ -1,0 +1,10 @@
+	
+	
+	#div1{
+	border-radius: 10px;
+	border: 1px black solid;
+	padding: 15px;
+	width: 300px;
+	background-color: #A87B5A;
+	box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.05);
+}
